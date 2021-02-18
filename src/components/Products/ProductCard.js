@@ -1,33 +1,29 @@
 import React, { useState } from "react"
 import getStripe from "../../utils/stripejs"
 
+import tie from "./../../images/tie.jpg"
+
 const productStyle = {
-  border: "1px dotted blue",
-  width: "300px",
-  height: " 300px",
+  width: "330px",
+
+  //marginRight: "1rem",
+  textAlign: "center",
 }
 
 const productImage = {
   width: "100%",
-  height: "100%",
+  height: "350px",
   objectFit: "cover",
   objectPosition: "center",
 }
 
-const buttonStyles = {
-  display: "block",
-  fontSize: "13px",
-  textAlign: "center",
-  color: "#000",
-  padding: "12px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "rgb(255, 178, 56)",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
+const productName = {
+  fontSize: "15px",
 }
-const buttonDisabledStyles = {
-  opacity: "0.5",
-  cursor: "not-allowed",
+
+const productPrice = {
+  fontSize: "14px",
+  fontWeight: "bold",
 }
 
 const formatPrice = (amount, currency) => {
@@ -66,21 +62,11 @@ const ProductCard = ({ product }) => {
     <div style={productStyle}>
       <form onSubmit={handleSubmit}>
         <fieldset style={{ border: "none" }}>
-          <img style={productImage} src={product.images} />
-          <legend>
-            <h4>{product.name}</h4>
-          </legend>
+          <img style={productImage} src={tie} />
 
-          <label>
-            Price{" "}
-            <select name="priceSelect">
-              {product.prices.map(price => (
-                <option key={price.id} value={price.id}>
-                  {formatPrice(price.unit_amount, price.currency)}
-                </option>
-              ))}
-            </select>
-          </label>
+          <p style={productName}>Gray and Black Striped Crew-neck Top</p>
+
+          <label style={productPrice}>R320</label>
         </fieldset>
       </form>
     </div>

@@ -1,17 +1,18 @@
 import React from "react"
 
 import svgLogo from "./../images/LessON.svg"
+import heroImg from "./../images/heroImg.jpg"
 
 const Hero = () => {
   const hero = {
-    border: "1px dotted blue",
     textAlign: "center",
   }
 
   const heroCover = {
     height: "50vh",
-    border: "1px dotted blue",
     marginBottom: "1.5rem",
+    width: "100%",
+    objectFit: "cover",
   }
 
   const brandLogo = {
@@ -29,7 +30,8 @@ const Hero = () => {
 
   return (
     <div style={hero} className="container">
-      <div style={heroCover}></div>
+      <img style={heroCover} src={heroImg} alt="woman sitting down" />
+
       <div>
         <img style={brandLogo} src={svgLogo} alt="LessON logo" />
         <h1 style={someHeroHeading}>Clothing flawlessly designed for you</h1>

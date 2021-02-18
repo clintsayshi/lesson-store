@@ -8,12 +8,15 @@ import Checkout from "../components/checkout"
 
 import svgLogo from "./../images/LessON.svg"
 import Hero from "../components/hero"
+import ProductsExcerpt from "../components/products-excerpt"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
     <Hero />
+
+    <ProductsExcerpt />
   </Layout>
 )
 

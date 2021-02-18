@@ -1,75 +1,24 @@
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import ProductCard from "./Products/ProductCard"
 
 const ProductsExcerpt = () => {
-  const hero = {
-    border: "1px dotted blue",
-    textAlign: "center",
-  }
-
-  const heroCover = {
-    height: "50vh",
-    border: "1px dotted blue",
-    marginBottom: "1.5rem",
-  }
-
-  const brandLogo = {
-    height: "4vh",
-  }
-
-  const someHeroHeading = {
-    textTransform: "uppercase",
-    marginTop: "0.5rem",
-  }
-
-  const someHeroParagraph = {
-    margin: "1rem 0",
+  const section = {
+    margin: "2rem auto",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    //border: "1px dotted blue",
   }
 
   return (
-    <StaticQuery
-      query={graphql`
-        query ProductPrices {
-          prices: allStripePrice(
-            filter: { active: { eq: true } }
-            sort: { fields: [unit_amount] }
-          ) {
-            edges {
-              node {
-                id
-                active
-                currency
-                unit_amount
-                product {
-                  id
-                  name
-                  images
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={({ prices }) => {
-        // Group prices by product
-        const products = {}
-        for (const { node: price } of prices.edges) {
-          const product = price.product
-          if (!products[product.id]) {
-            products[product.id] = product
-            products[product.id].prices = []
-          }
-          products[product.id].prices.push(price)
-        }
-
-        return (
-          <div style={containerStyles}>
-            {Object.keys(products).map(key => (
-              <ProductCard key={products[key].id} product={products[key]} />
-            ))}
-          </div>
-        )
-      }}
-    />
+    <section style={section} className="container">
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+    </section>
   )
 }
 

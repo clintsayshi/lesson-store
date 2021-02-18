@@ -15,8 +15,8 @@ const AdvancedExamplePage = () => {
   return (
     <Layout>
       <SEO title="Advanced Example" />
-      <h1>This is the advanced example</h1>
-      <Products />
+      <h1 className="container">This is the advanced example</h1>
+      {/*  <Products /> */}
     </Layout>
   )
 }
