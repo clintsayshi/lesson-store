@@ -10,12 +10,14 @@ const ShopPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Shop</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod cumque
-        similique molestiae illum suscipit, dolore dignissimos minus modi aut
-        quos qui officiis, in odit doloremque veniam iste. Dicta, quo itaque?
-      </p>
+      <section className="container">
+        <h1>Shop</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod cumque
+          similique molestiae illum suscipit, dolore dignissimos minus modi aut
+          quos qui officiis, in odit doloremque veniam iste. Dicta, quo itaque?
+        </p>
+      </section>
     </Layout>
   )
 }
