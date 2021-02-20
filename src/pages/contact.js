@@ -17,7 +17,7 @@ const ContactPage = () => {
 
       <div className="divider"></div>
       <p className="container">
-        To get in touch, send us an email at hello@ferme.shop or send us an
+        To get in touch, send us an email at manakanejustin@gmail.com or send us an
         email with the form below. If your email is to inquire about an already
         placed order, please include your Order Number found in your
         confirmation email.
