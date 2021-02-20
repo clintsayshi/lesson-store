@@ -112,13 +112,13 @@ const Header = ({ siteTitle }) => {
         <div className={styles.cartActions}></div>
       </div>
 
-      <div
+      {/* <div
         className={
           toggleCart
             ? `${styles.overlay} ${styles.active}`
             : `${styles.overlay}`
         }
-      ></div>
+      ></div> */}
     </header>
   )
 }

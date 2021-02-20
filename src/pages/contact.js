@@ -10,12 +10,20 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Get in Touch</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae,
-        repudiandae recusandae, incidunt fugit expedita culpa quia voluptas
-        fugiat qui quos ipsa iusto, ipsum laboriosam delectus harum eius autem
-        deserunt sed.
+
+      <div className={`container pageHeading`}>
+        <h3 className="pageHeadingText">Get in Touch</h3>
+      </div>
+
+      <div className="divider"></div>
+      <p className="container">
+        To get in touch, send us an email at hello@ferme.shop or send us an
+        email with the form below. If your email is to inquire about an already
+        placed order, please include your Order Number found in your
+        confirmation email.
+        <br />
+        You can also follow us on{" "}
+        <a href="https:/instagram.com/mcclintsayshi">Instagram</a>
       </p>
     </Layout>
   )

@@ -48,3 +48,26 @@ header {
     width: 90%;
   }
 }
+
+.divider {
+  height: 1rem;
+}
+
+.pageHeading {
+  display: flex;
+  align-items: center;
+}
+
+.pageHeadingText {
+  margin-right: 0.25rem;
+}
+
+.aboutLogo {
+  height: 5vh;
+  margin-left: 0.25rem;
+}
+
+.aboutParagraph {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

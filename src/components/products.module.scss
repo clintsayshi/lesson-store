@@ -5,15 +5,25 @@
 */
 
 .section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.viewProducts {
   margin: 2rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-  border: 1px dotted blue;
 
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
   }
+}
+
+.link {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* 
@@ -35,10 +45,13 @@
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .productPrice {
   font-size: 14px;
   font-family: monospace;
   color: blue;
+  margin-top: 0;
 }
